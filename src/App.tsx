@@ -1,12 +1,15 @@
 import React from "react";
 import "./App.scss";
+import { Layout } from "./hoc/Layout/Layout";
+import { AuthPage } from "./components/AuthPage/AuthPage"
+import { UsersPage } from "./components/UsersPage/UsersPage"
 
 function App() {
   return (
-    <div>
-      WORKS!
-      <input type="text" />
-    </div>
+    <Layout>
+      <AuthPage />
+      <UsersPage />
+    </Layout>
   );
 }
 
