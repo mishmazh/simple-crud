@@ -1,0 +1,32 @@
+{
+  "login": {
+    "email": "admin@gmail.com",
+    "password": "admin"
+  },
+  "users": [
+      {
+        "name": "Дмитрий",
+        "surname": "Васнецов",
+        "location": "Москва",
+        "id": 1
+      },
+      {
+        "name": "Арина",
+        "surname": "Вселенская",
+        "location": "Санкт-Петербург",
+        "id": 2
+      },
+      {
+        "name": "Мария",
+        "surname": "Зайцмен",
+        "location": "Москва",
+        "id": 3
+      },
+      {
+        "name": "Кирилл",
+        "surname": "Желтков",
+        "location": "Шишкино",
+        "id": 4
+      }
+    ]
+}
