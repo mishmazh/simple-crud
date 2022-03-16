@@ -2,17 +2,18 @@
   font-family: "Nunito", sans-serif;
   height: 100vh;
   padding: 0 15px;
+
   background: -webkit-linear-gradient(
-    130deg,
-    #94b0b7,
-    #7697a0,
-    #4a707a
+    114deg,
+    #415b62,
+    #506f77,
+    #5b7f88
   ); /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(
-    130deg,
-    #94b0b7,
-    #7697a0,
-    #4a707a
+    114deg,
+    #415b62,
+    #506f77,
+    #5b7f88
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
   main {
@@ -28,6 +29,6 @@
   background-color: #929292;
 }
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.2);
   background-color: #f9f9fd;
 }

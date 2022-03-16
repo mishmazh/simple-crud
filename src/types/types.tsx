@@ -5,7 +5,6 @@ export interface IAuth {
 
 export interface IUser {
   name: string;
-  surname: string;
   location: string;
   id: number;
 }

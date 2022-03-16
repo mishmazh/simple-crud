@@ -1,0 +1,32 @@
+.AddUser {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 15px;
+  border: 2px solid #bebebe;
+  border-radius: 5px;
+  padding: 10px;
+  width: 100%;
+  max-width: 380px;
+  background: #506f77;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+
+  input {
+    margin-bottom: 10px;
+    padding: 6px 0 6px 9px;
+    border-radius: 5px;
+    background: #f0f0f0;
+  }
+
+  button {
+    padding: 6px 12px;
+    border-radius: 5px;
+    background: #007c21;
+    color: #fff;
+    opacity: 0.9;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}
