@@ -1,13 +1,8 @@
 import React, { FC, useState } from "react";
 import userList from "../../store/userList";
-import { IUser } from "../../types/types";
 import classes from "./AddUser.module.scss";
 
-interface AddUserProps {
-  users: IUser[];
-}
-
-const AddUser: FC<AddUserProps> = ({ users }) => {
+const AddUser: FC = () => {
   const [name, setName] = useState<string>("");
   const [location, setLocation] = useState<string>("");
 
@@ -17,6 +12,10 @@ const AddUser: FC<AddUserProps> = ({ users }) => {
 
   const changeLocationHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setLocation(e.target.value);
+  };
+
+  const addUserHandler = () => {
+    userList.addUser(name, location);
   };
 
   return (
@@ -34,13 +33,7 @@ const AddUser: FC<AddUserProps> = ({ users }) => {
         placeholder="Введите местоположение..."
       />
 
-      <button
-        onClick={() =>
-          userList.addUser(name, location, users[users.length - 1].id + 1)
-        }
-      >
-        Добавить юзера
-      </button>
+      <button onClick={addUserHandler}>Добавить</button>
     </div>
   );
 };

@@ -1,6 +1,7 @@
 import { makeAutoObservable, runInAction } from "mobx";
 import axios from "axios";
 import { IUser } from "../types/types";
+import { v4 as uuidv4 } from "uuid";
 
 class UserList {
   users: IUser[] = [];
@@ -17,11 +18,11 @@ class UserList {
     });
   }
 
-  addUser(name: string, location: string, id: number) {
+  addUser(name: string, location: string) {
     const userData = {
       name,
       location,
-      id,
+      id: uuidv4(),
     };
 
     runInAction(() => {
@@ -29,7 +30,21 @@ class UserList {
     });
   }
 
-  removeUser(id: number) {
+  editUser(name: string, location: string, id: string) {
+    const userData = {
+      name,
+      location,
+      id,
+    };
+
+    const index = this.users.map((user) => user.id);
+
+    runInAction(() => {
+      this.users[index.indexOf(id)] = userData;
+    });
+  }
+
+  removeUser(id: string) {
     runInAction(() => {
       this.users = this.users.filter((users) => users.id !== id);
     });

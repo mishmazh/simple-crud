@@ -32,8 +32,24 @@
     }
   }
 
+  .inputs {
+    display: flex;
+    align-items: center;
+  }
+
+  input {
+    padding: 6px 0 6px 9px;
+    margin-right: 8px;
+    border-radius: 5px;
+    background: #f0f0f0;
+  }
+
   .edit {
     background-color: #248f40;
+  }
+
+  .save {
+    background-color: #3e94d1;
   }
 
   .remove {

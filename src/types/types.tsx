@@ -6,5 +6,5 @@ export interface IAuth {
 export interface IUser {
   name: string;
   location: string;
-  id: number;
+  id: string;
 }

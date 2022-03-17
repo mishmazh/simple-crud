@@ -10,18 +10,10 @@ const UserPage: FC = () => {
     userList.getUsers();
   }, []);
 
-  // const addHandler = () => {
-
-  // }
-
-  const removeHandler = (id: number) => {
-    userList.removeUser(id);
-  };
-
   return (
     <div className={classes.UserPage}>
-      <UserList users={userList.users} removeHandler={removeHandler} />
-      <AddUser users={userList.users} />
+      <UserList users={userList.users} />
+      <AddUser />
     </div>
   );
 };

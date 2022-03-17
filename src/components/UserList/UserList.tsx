@@ -6,14 +6,13 @@ import classes from "./UserList.module.scss";
 
 interface UserListProps {
   users: IUser[];
-  removeHandler: (e: number) => void;
 }
 
-const UserList: FC<UserListProps> = ({ users, removeHandler }) => {
+const UserList: FC<UserListProps> = ({ users }) => {
   return (
     <div className={classes.UserList}>
       {users.map((user) => (
-        <UserItem user={user} removeHandler={removeHandler} key={user.id} />
+        <UserItem user={user} key={user.id} />
       ))}
     </div>
   );
