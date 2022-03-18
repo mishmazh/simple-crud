@@ -1,4 +1,4 @@
-import { FC, useState } from "react";
+import React, { FC, useState } from "react";
 import userList from "../../../store/userList";
 import { IUser } from "../../../types/types";
 import classes from "./UserItem.module.scss";
@@ -13,6 +13,7 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
   const [name, setName] = useState<string>(user.name);
   const [location, setLocation] = useState<string>(user.location);
 
+  // ---------- inputs ---------- //
   const changeNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
@@ -21,6 +22,7 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
     setLocation(e.target.value);
   };
 
+  // ---------- buttons ---------- //
   const removeUserHandler = (id: string) => {
     userList.removeUser(id);
   };
@@ -30,6 +32,7 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
     setEdit(false);
   };
 
+  // ---------- JSX в зависимости от кнопки ---------- //
   const userData = (
     <div>
       <div className={classes.name}>{user.name}</div>
@@ -54,17 +57,18 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
     </div>
   );
 
-  const saveButton = (
-    <button className={classes.save} onClick={saveUserHandler}>
-      Сохранить
-    </button>
-  );
-
   const editButton = (
     <button className={classes.edit} onClick={() => setEdit(true)}>
       Редактировать
     </button>
   );
+
+  const saveButton = (
+    <button className={classes.save} onClick={saveUserHandler}>
+      Сохранить
+    </button>
+  );
+  // --------------------------------------------- //
 
   return (
     <div className={classes.UserItem}>

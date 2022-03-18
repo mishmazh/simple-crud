@@ -1,0 +1,28 @@
+{
+  "login": {
+    "email": "admin@gmail.com",
+    "password": "admin"
+  },
+  "users": [
+    {
+      "name": "Михаил",
+      "location": "Москва",
+      "id": "2c2b85db-16b4-4755-93da-f461fd4787c8"
+    },
+    {
+      "name": "Александр",
+      "location": "Москва",
+      "id": "850cc084-624b-413c-88fd-a0b2172b18da"
+    },
+    {
+      "name": "Мария",
+      "location": "Лондон",
+      "id": "ab203eaf-7c3e-41d2-b571-657f96b45b09"
+    },
+    {
+      "name": "Саша",
+      "location": "Саратов",
+      "id": "33ba70d3-79f4-414e-8114-ce21cc10bcfa"
+    }
+  ]
+}

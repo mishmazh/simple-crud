@@ -15,7 +15,7 @@ const AuthPage: FC = () => {
     setPassword(e.target.value);
   };
 
-  const clickHandler = () => {
+  const loginHandler = () => {
     auth.authAttempt(email, password);
   };
 
@@ -37,7 +37,7 @@ const AuthPage: FC = () => {
           placeholder="Введите пароль"
         />
 
-        <button onClick={clickHandler}>Войти</button>
+        <button onClick={loginHandler}>Войти</button>
       </div>
     </div>
   );
