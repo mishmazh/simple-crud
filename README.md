@@ -1,18 +1,25 @@
 # Тестовое задание
 ***
 
-Для запуска проекта понадобятся две команды:
+## Запуск:
 
-### `npx json-server --watch src/db.json --port 8000`
-### `npm start`
+npm:
 
-в случае с yarn:
+    npx json-server --watch src/db.json --port 8000
+    npm start
 
-### `yarn json-server --watch src/db.json --port 8000`
-### `yarn start`
+yarn:
 
-После запуска в окне авторизации необходимо ввести следующие данные:
+    yarn json-server --watch src/db.json --port 8000
+    yarn start
+
+Для входа необходимо ввести следующие данные:
 
 Логин: `admin@gmail.com`  
 Пароль: `admin`
 
+## Технологии:
+1. React
+2. MobX
+3. Typescript
+4. Json-server
