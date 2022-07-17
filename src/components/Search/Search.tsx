@@ -1,22 +1,13 @@
 import classes from "./Search.module.scss";
-import React, { useState } from "react";
+import React, {useEffect, useState} from "react";
 import userList from "../../store/userList";
 
 const Search = () => {
   const [value, setValue] = useState("");
 
-  const onSubmit = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key !== "Enter") {
-      return;
-    }
-
-    if (value.trim()) {
+  useEffect(() => {
       userList.search(value);
-    } else {
-      userList.clearUsers();
-      userList.getUsers();
-    }
-  };
+  }, [value])
 
   const changeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setValue(e.target.value);
@@ -26,8 +17,7 @@ const Search = () => {
     <div className={classes.Search}>
       <input
         type="text"
-        placeholder="Введите имя или местоположение пользователя..."
-        onKeyPress={onSubmit}
+        placeholder="Enter the name of user..."
         onChange={changeHandler}
         value={value}
       />

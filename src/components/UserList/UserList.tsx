@@ -1,6 +1,6 @@
 import { observer } from "mobx-react-lite";
 import { FC } from "react";
-import { IUser } from "../../types/types";
+import { IUser } from "../../models/models";
 import UserItem from "./UserItem/UserItem";
 import classes from "./UserList.module.scss";
 

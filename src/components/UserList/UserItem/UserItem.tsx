@@ -1,6 +1,6 @@
 import React, { FC, useState } from "react";
 import userList from "../../../store/userList";
-import { IUser } from "../../../types/types";
+import { IUser } from "../../../models/models";
 import classes from "./UserItem.module.scss";
 
 interface UserItemProps {
@@ -24,11 +24,11 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
 
   // ---------- buttons ---------- //
   const removeUserHandler = (id: string) => {
-    userList.removeUser(id);
+    userList.deleteUser(id);
   };
 
   const saveUserHandler = () => {
-    userList.editUser(name, location, user.id);
+    userList.updateUser({name, location, id: user.id});
     setEdit(false);
   };
 

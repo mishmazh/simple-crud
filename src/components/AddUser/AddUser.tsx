@@ -1,6 +1,7 @@
 import React, { FC, useState } from "react";
 import userList from "../../store/userList";
 import classes from "./AddUser.module.scss";
+import { v4 as uuid } from "uuid";
 
 const AddUser: FC = () => {
   const [name, setName] = useState<string>("");
@@ -15,25 +16,27 @@ const AddUser: FC = () => {
   };
 
   const addUserHandler = () => {
-    userList.addUser(name, location);
+    userList.createUser({ name, location, id: uuid() });
   };
 
   return (
-    <div className={classes.AddUser}>
-      <input
-        type="text"
-        value={name}
-        onChange={changeNameHandler}
-        placeholder="Введите имя..."
-      />
-      <input
-        type="text"
-        value={location}
-        onChange={changeLocationHandler}
-        placeholder="Введите местоположение..."
-      />
+    <div className={classes.backdrop}>
+      <div className={classes.AddUser}>
+        <input
+          type="text"
+          value={name}
+          onChange={changeNameHandler}
+          placeholder="Enter the name..."
+        />
+        <input
+          type="text"
+          value={location}
+          onChange={changeLocationHandler}
+          placeholder="Enter the location..."
+        />
 
-      <button onClick={addUserHandler}>Добавить</button>
+        <button onClick={addUserHandler}>Add</button>
+      </div>
     </div>
   );
 };

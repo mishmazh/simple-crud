@@ -1,6 +1,6 @@
-# Тестовое задание
+# Simple CRUD
 
-## Запуск:
+## How launch:
 
 npm:
 
@@ -12,12 +12,12 @@ yarn:
     yarn json-server --watch src/db.json --port 8000
     yarn start
 
-Для входа необходимо ввести следующие данные:
+Need enter the data below for entry:
 
-Логин: `admin@gmail.com`  
-Пароль: `admin`
+Login: `admin@gmail.com`  
+Password: `admin`
 
-## Технологии:
+## Stack:
 1. React
 2. MobX
 3. Typescript
