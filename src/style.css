@@ -104,9 +104,52 @@ body {
 
 .main-layout {
   height: 100vh;
-  background: -webkit-linear-gradient(45deg, #040d2c, #462a8b, #c505d6);
-  background: linear-gradient(45deg, #040d2c, #462a8b, #c505d6);
+  background-color: #2d283e;
   padding: 25px;
+}
+
+.btn {
+  padding: 10px 12px;
+  font-size: 15px;
+  color: #fff;
+  transition: 0.1s ease-in;
+}
+.btn:hover {
+  background-color: #d1d7e0;
+  color: #000000;
+}
+
+.primary-btn {
+  background-color: #802bb1;
+}
+
+.secondary-btn {
+  background-color: #be2f33;
+}
+
+.auth-btn {
+  font-size: 14px;
+  height: 40px;
+  background: #4a707a;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  min-width: 380px;
+}
+.auth-form__title {
+  text-align: center;
+  font-size: 30px;
+  padding-bottom: 24px;
+  color: #ffffff;
+}
+.auth-form input {
+  width: 100%;
+  font-size: 13px;
+  padding: 9px 0 9px 12px;
+  background: #f0f0f0;
 }
 
 /*# sourceMappingURL=style.css.map */

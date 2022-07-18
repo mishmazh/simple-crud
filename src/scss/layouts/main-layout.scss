@@ -1,7 +1,6 @@
 .main-layout {
   @extend %grid-place-center;
   height: 100vh;
-  background: -webkit-linear-gradient(45deg, #040d2c, #462a8b, #c505d6);
-  background: linear-gradient(45deg, #040d2c, #462a8b, #c505d6);
+  background-color: $dark;
   padding: 25px;
 }

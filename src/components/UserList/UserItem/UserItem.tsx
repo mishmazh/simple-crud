@@ -28,7 +28,7 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
   };
 
   const saveUserHandler = () => {
-    userList.updateUser({name, location, id: user.id});
+    userList.updateUser({ name, location, id: user.id });
     setEdit(false);
   };
 
@@ -58,13 +58,13 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
   );
 
   const editButton = (
-    <button className={classes.edit} onClick={() => setEdit(true)}>
+    <button className="btn primary-btn" onClick={() => setEdit(true)}>
       Редактировать
     </button>
   );
 
   const saveButton = (
-    <button className={classes.save} onClick={saveUserHandler}>
+    <button className="btn primary-btn" onClick={saveUserHandler}>
       Сохранить
     </button>
   );
@@ -78,7 +78,7 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
         {isEdit ? saveButton : editButton}
 
         <button
-          className={classes.remove}
+          className="btn secondary-btn"
           onClick={() => removeUserHandler(user.id)}
         >
           Удалить

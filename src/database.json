@@ -5,11 +5,6 @@
   },
   "users": [
     {
-      "name": "Михаил",
-      "location": "Москва",
-      "id": "2c2b85db-16b4-4755-93da-f461fd4787c8"
-    },
-    {
       "name": "Александр",
       "location": "Москва",
       "id": "850cc084-624b-413c-88fd-a0b2172b18da"
@@ -25,9 +20,9 @@
       "id": "33ba70d3-79f4-414e-8114-ce21cc10bcfa"
     },
     {
-      "name": "123",
-      "location": "321",
-      "id": "f4b535a4-b5d4-4c7e-9203-f908d9151d2f"
+      "name": "",
+      "location": "",
+      "id": "54cb443b-ff7f-4c7b-b835-59d05eb0d2d4"
     }
   ]
 }

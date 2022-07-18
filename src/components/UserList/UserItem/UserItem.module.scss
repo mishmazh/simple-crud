@@ -19,18 +19,18 @@
     align-items: center;
   }
 
-  button {
-    margin-right: 10px;
-    padding: 10px 12px;
-    font-size: 17px;
-    border-radius: 5px;
-    color: #fff;
-    opacity: 0.9;
+  // button {
+  //   margin-right: 10px;
+  //   padding: 10px 12px;
+  //   font-size: 17px;
+  //   border-radius: 5px;
+  //   color: #fff;
+  //   opacity: 0.9;
 
-    &:hover {
-      opacity: 1;
-    }
-  }
+  //   &:hover {
+  //     opacity: 1;
+  //   }
+  // }
 
   .inputs {
     display: flex;
@@ -44,15 +44,15 @@
     background: #f0f0f0;
   }
 
-  .edit {
-    background-color: #248f40;
-  }
+  // .edit {
+  //   background-color: #248f40;
+  // }
 
-  .save {
-    background-color: #3e94d1;
-  }
+  // .save {
+  //   background-color: #3e94d1;
+  // }
 
-  .remove {
-    background-color: #be2f33;
-  }
+  // .remove {
+  //   background-color: #be2f33;
+  // }
 }

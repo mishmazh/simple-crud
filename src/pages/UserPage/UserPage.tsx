@@ -7,7 +7,7 @@ import classes from "./UserPage.module.scss";
 import Search from "../../components/Search/Search";
 
 const UserPage: FC = () => {
-  const [toggle, setToggle] = useState<boolean>(false);
+  const [isDialog, setDialog] = useState<boolean>(false);
 
   useEffect(() => {
     userList.fetchUsers();
@@ -16,9 +16,9 @@ const UserPage: FC = () => {
   return (
     <div className={classes.UserPage}>
       <Search />
-      <button onClick={() => setToggle(true)}>Add user</button>
+      <button onClick={() => setDialog(true)}>Add user</button>
       <UserList users={userList.users} />
-      {toggle && <AddUser />}
+      {isDialog && <AddUser setDialog={setDialog} />}
     </div>
   );
 };

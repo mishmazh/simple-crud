@@ -1,0 +1,25 @@
+.btn {
+  padding: 10px 12px;
+  font-size: 15px;
+  color: #fff;
+  transition: 0.1s ease-in;
+
+  &:hover {
+    background-color: $light;
+    color: $black;
+  }
+}
+
+.primary-btn {
+  background-color: $primary;
+}
+
+.secondary-btn {
+  background-color: #be2f33;
+}
+
+.auth-btn {
+  font-size: 14px;
+  height: 40px;
+  background: #4a707a;
+}

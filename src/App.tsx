@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Layout } from "./hoc/Layout/Layout";
-import AuthPage from "./pages/AuthPage/AuthPage";
+import AuthPage from "./pages/AuthPage";
 import UserPage from "./pages/UserPage/UserPage";
 import { Routes, Route, Navigate } from "react-router-dom";
 import auth from "./store/auth";

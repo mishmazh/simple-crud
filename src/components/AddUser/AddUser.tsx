@@ -3,7 +3,11 @@ import userList from "../../store/userList";
 import classes from "./AddUser.module.scss";
 import { v4 as uuid } from "uuid";
 
-const AddUser: FC = () => {
+interface AddUserProps {
+  setDialog: any;
+}
+
+const AddUser: FC<AddUserProps> = ({ setDialog }) => {
   const [name, setName] = useState<string>("");
   const [location, setLocation] = useState<string>("");
 
@@ -17,25 +21,30 @@ const AddUser: FC = () => {
 
   const addUserHandler = () => {
     userList.createUser({ name, location, id: uuid() });
+    setDialog(false);
   };
 
   return (
-    <div className={classes.backdrop}>
-      <div className={classes.AddUser}>
-        <input
-          type="text"
-          value={name}
-          onChange={changeNameHandler}
-          placeholder="Enter the name..."
-        />
-        <input
-          type="text"
-          value={location}
-          onChange={changeLocationHandler}
-          placeholder="Enter the location..."
-        />
+    <div className={classes.addUser}>
+      <div className={classes.backdrop} onClick={() => setDialog(false)}>
+        <div className={classes.AddUserForm}>
+          <input
+            type="text"
+            value={name}
+            onChange={changeNameHandler}
+            placeholder="Enter the name..."
+          />
+          <input
+            type="text"
+            value={location}
+            onChange={changeLocationHandler}
+            placeholder="Enter the location..."
+          />
 
-        <button onClick={addUserHandler}>Add</button>
+          <button className="btn primary-btn" onClick={addUserHandler}>
+            Add
+          </button>
+        </div>
       </div>
     </div>
   );
