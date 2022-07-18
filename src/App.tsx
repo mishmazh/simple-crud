@@ -1,11 +1,11 @@
 import { FC } from "react";
-import "./App.scss";
 import { Layout } from "./hoc/Layout/Layout";
 import AuthPage from "./pages/AuthPage/AuthPage";
 import UserPage from "./pages/UserPage/UserPage";
 import { Routes, Route, Navigate } from "react-router-dom";
 import auth from "./store/auth";
 import { observer } from "mobx-react-lite";
+import "./style.css";
 
 const App: FC = () => {
   let routes = (
