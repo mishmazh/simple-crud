@@ -19,7 +19,7 @@ class UserList {
   }
 
   async createUser(values: IUser) {
-    await axios.post<IUser>("/users", values).then((res) => res.data);
+    await axios.post<IUser>("/users", values);
     await this.fetchUsers();
   }
 

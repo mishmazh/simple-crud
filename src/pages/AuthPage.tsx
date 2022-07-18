@@ -16,7 +16,7 @@ const AuthPage: FC = () => {
 
   const onSubmitHandler = (e: FormEvent) => {
     e.preventDefault();
-    auth.authAttempt(email, password);
+    auth.login(email, password);
   };
 
   return (

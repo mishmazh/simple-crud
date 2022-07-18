@@ -57,7 +57,7 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
   );
 
   const editButton = (
-    <button className="btn primary-btn" onClick={() => setEdit(true)}>
+    <button className="btn primary-btn width-btn" onClick={() => setEdit(true)}>
       Edit
     </button>
   );
@@ -77,7 +77,7 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
         {isEdit ? saveButton : editButton}
 
         <button
-          className="btn secondary-btn"
+          className="btn secondary-btn width-btn"
           onClick={() => deleteUserHandler(user.id)}
         >
           Delete

@@ -146,6 +146,10 @@ body {
   background-color: #564f6f;
 }
 
+.width-btn {
+  width: 110px;
+}
+
 .auth-form {
   display: flex;
   flex-direction: column;

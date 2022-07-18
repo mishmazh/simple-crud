@@ -9,9 +9,8 @@ class AuthStore {
     makeAutoObservable(this);
   }
 
-  async authAttempt(email: string, password: string) {
-    const response = await axios.get<IAuth>("/login");
-    const data = response.data;
+  async login(email: string, password: string) {
+    const data = await axios.get<IAuth>("/login").then(res => res.data)
 
     if (data.email === email && data.password === password) {
       runInAction(() => {
