@@ -83,6 +83,10 @@ body {
   font-family: "Nunito", sans-serif;
 }
 
+.elements-block {
+  gap: 8px;
+}
+
 ::-webkit-scrollbar {
   width: 12px;
   background-color: #f9f9fd;
@@ -102,6 +106,21 @@ body {
   place-items: center;
 }
 
+.user-list, .users-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.elements-block {
+  display: flex;
+  align-items: center;
+}
+
+.user-item {
+  display: flex;
+  justify-content: space-between;
+}
+
 .main-layout {
   height: 100vh;
   background-color: #2d283e;
@@ -111,7 +130,7 @@ body {
 .btn {
   padding: 10px 12px;
   font-size: 15px;
-  color: #fff;
+  color: #ffffff;
   transition: 0.1s ease-in;
 }
 .btn:hover {
@@ -124,13 +143,7 @@ body {
 }
 
 .secondary-btn {
-  background-color: #be2f33;
-}
-
-.auth-btn {
-  font-size: 14px;
-  height: 40px;
-  background: #4a707a;
+  background-color: #564f6f;
 }
 
 .auth-form {
@@ -150,6 +163,30 @@ body {
   font-size: 13px;
   padding: 9px 0 9px 12px;
   background: #f0f0f0;
+}
+
+.users-form {
+  gap: 25px;
+  min-width: 780px;
+  color: #ffffff;
+}
+
+.user-list {
+  gap: 9px;
+}
+
+.user-item {
+  padding: 12px 10px;
+  background-color: rgba(0, 0, 0, 0.2);
+  transition: 0.1s ease-in;
+}
+.user-item__name {
+  font-size: 21px;
+  margin-bottom: 4px;
+  font-weight: bold;
+}
+.user-item:hover {
+  transform: scale(1.04);
 }
 
 /*# sourceMappingURL=style.css.map */

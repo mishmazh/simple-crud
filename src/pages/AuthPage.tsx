@@ -1,6 +1,5 @@
 import { ChangeEvent, FC, FormEvent, useState } from "react";
 import auth from "../store/auth";
-import { observer } from "mobx-react-lite";
 import AuthForm from "../components/AuthForm";
 
 const AuthPage: FC = () => {
@@ -31,4 +30,4 @@ const AuthPage: FC = () => {
   );
 };
 
-export default observer(AuthPage);
+export default AuthPage;

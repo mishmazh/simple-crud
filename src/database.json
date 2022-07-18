@@ -6,7 +6,7 @@
   "users": [
     {
       "name": "Александр",
-      "location": "Москва",
+      "location": "",
       "id": "850cc084-624b-413c-88fd-a0b2172b18da"
     },
     {
@@ -22,7 +22,7 @@
     {
       "name": "",
       "location": "",
-      "id": "54cb443b-ff7f-4c7b-b835-59d05eb0d2d4"
+      "id": "a56b6411-6096-4a3c-b01b-3405f08eed1f"
     }
   ]
 }

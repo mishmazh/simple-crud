@@ -1,7 +1,6 @@
-import React, { FC, useState } from "react";
-import userList from "../../../store/userList";
-import { IUser } from "../../../models/models";
-import classes from "./UserItem.module.scss";
+import {ChangeEvent, FC, useState} from "react";
+import userList from "../store/userList";
+import { IUser } from "../models/models";
 
 interface UserItemProps {
   user: IUser;
@@ -14,16 +13,16 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
   const [location, setLocation] = useState<string>(user.location);
 
   // ---------- inputs ---------- //
-  const changeNameHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const changeNameHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setName(e.target.value);
   };
 
-  const changeLocationHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const changeLocationHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setLocation(e.target.value);
   };
 
   // ---------- buttons ---------- //
-  const removeUserHandler = (id: string) => {
+  const deleteUserHandler = (id: string) => {
     userList.deleteUser(id);
   };
 
@@ -35,53 +34,53 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
   // ---------- JSX в зависимости от кнопки ---------- //
   const userData = (
     <div>
-      <div className={classes.name}>{user.name}</div>
-      <div>Местоположение: {user.location}</div>
+      <div className="user-item__name">{user.name}</div>
+      <div>Location: {user.location}</div>
     </div>
   );
 
   const editData = (
-    <div className={classes.inputs}>
+    <div className="elements-block">
       <input
         type="text"
         value={name}
         onChange={changeNameHandler}
-        placeholder="Имя..."
+        placeholder="Name..."
       />
       <input
         type="text"
         value={location}
         onChange={changeLocationHandler}
-        placeholder="Местоположение..."
+        placeholder="Location..."
       />
     </div>
   );
 
   const editButton = (
     <button className="btn primary-btn" onClick={() => setEdit(true)}>
-      Редактировать
+      Edit
     </button>
   );
 
   const saveButton = (
     <button className="btn primary-btn" onClick={saveUserHandler}>
-      Сохранить
+      Save
     </button>
   );
   // --------------------------------------------- //
 
   return (
-    <div className={classes.UserItem}>
+    <div className="user-item">
       {isEdit ? editData : userData}
 
-      <div className={classes.buttons}>
+      <div className="elements-block">
         {isEdit ? saveButton : editButton}
 
         <button
           className="btn secondary-btn"
-          onClick={() => removeUserHandler(user.id)}
+          onClick={() => deleteUserHandler(user.id)}
         >
-          Удалить
+          Delete
         </button>
       </div>
     </div>

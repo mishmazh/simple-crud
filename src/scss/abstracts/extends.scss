@@ -8,13 +8,12 @@
   flex-direction: column;
 }
 
-%form-radius-padding {
-  border-radius: 5px;
-  padding: 15px;
+%flex-items-center {
+  display: flex;
+  align-items: center;
 }
 
-%flex-between-center {
+%flex-between {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }

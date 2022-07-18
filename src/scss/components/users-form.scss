@@ -1,0 +1,6 @@
+.users-form {
+  @extend %flex-col;
+  gap: 25px;
+  min-width: 780px;
+  color: $white;
+}

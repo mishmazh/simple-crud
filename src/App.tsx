@@ -1,7 +1,7 @@
 import { FC } from "react";
-import { Layout } from "./hoc/Layout/Layout";
+import { Layout } from "./hoc/Layout";
 import AuthPage from "./pages/AuthPage";
-import UserPage from "./pages/UserPage/UserPage";
+import UsersPage from "./pages/UsersPage";
 import { Routes, Route, Navigate } from "react-router-dom";
 import auth from "./store/auth";
 import { observer } from "mobx-react-lite";
@@ -18,7 +18,7 @@ const App: FC = () => {
   if (auth.isAuth) {
     routes = (
       <Routes>
-        <Route path="/users" element={<UserPage />} />
+        <Route path="/users" element={<UsersPage />} />
         <Route path="/" element={<Navigate to="/users" />} />
       </Routes>
     );
