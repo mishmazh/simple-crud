@@ -1,6 +1,7 @@
 import { ChangeEvent, FC, FormEvent } from "react";
 import Button from "./UI/Button";
 import Input from "./UI/Input";
+import {isValid} from "../helpers/validation";
 
 interface AuthFormProps {
   email: string;
@@ -34,7 +35,7 @@ const AuthForm: FC<AuthFormProps> = ({
         placeholder="Enter the password..."
       />
 
-      <Button className="primary-btn" type="submit">
+      <Button className="primary-btn" type="submit" disabled={!isValid(email) || !isValid(password)}>
         Login
       </Button>
     </form>

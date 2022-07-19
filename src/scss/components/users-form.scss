@@ -3,4 +3,10 @@
   gap: 25px;
   min-width: 780px;
   color: $white;
+
+  &__empty {
+    text-align: center;
+    font-weight: bold;
+    font-size: 17px;
+  }
 }

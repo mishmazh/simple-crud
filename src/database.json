@@ -5,34 +5,34 @@
   },
   "users": [
     {
-      "name": "Александр",
-      "location": "",
-      "id": "850cc084-624b-413c-88fd-a0b2172b18da"
+      "name": "Michael",
+      "location": "Los Angeles",
+      "id": "38946bb7-1458-45b0-b550-d5dbad9ccc40"
     },
     {
-      "name": "Мария",
-      "location": "Лондон",
-      "id": "ab203eaf-7c3e-41d2-b571-657f96b45b09"
+      "name": "John",
+      "location": "Tokio, Japan",
+      "id": "88dab8f5-53da-4e7c-9f76-e658d1160841"
     },
     {
-      "name": "Саша",
-      "location": "Саратов",
-      "id": "33ba70d3-79f4-414e-8114-ce21cc10bcfa"
+      "name": "Olya",
+      "location": "Warszawa",
+      "id": "2ca5b278-149d-4e79-ab07-85ea4a44696d"
     },
     {
-      "name": "апапап",
-      "location": "",
-      "id": "175294a1-237b-4644-81f2-196674fcb209"
+      "name": "Joe",
+      "location": "Brazil",
+      "id": "825cc194-7fdd-4a19-9f9b-c346a39a6afd"
     },
     {
-      "name": "ПОЛУЧИЛОСЬ",
-      "location": "!!!",
-      "id": "7d4e3e63-97a3-4270-9041-0c0701518027"
+      "name": "Gaius Iulius Caesar",
+      "location": "Rome",
+      "id": "36231fc8-f4d9-4cc4-9851-23f0a45b1e49"
     },
     {
-      "name": "",
-      "location": "",
-      "id": "114de273-ff20-4d7e-84a3-da86bd01cb84"
+      "name": "Dostoevsky",
+      "location": "Saint Petersburg",
+      "id": "c01d81f5-3660-4de7-b97e-2abf5188efbc"
     }
   ]
 }

@@ -7,6 +7,7 @@ interface ButtonProps {
   onSubmit?: () => void;
   children: ReactNode;
   width?: string;
+  disabled?: boolean;
 }
 
 const Button: FC<ButtonProps> = ({

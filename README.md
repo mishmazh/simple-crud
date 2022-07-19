@@ -7,11 +7,6 @@ npm:
     npx json-server --watch src/database.json --port 8000
     npm start
 
-yarn:
-
-    yarn json-server --watch src/database.json --port 8000
-    yarn start
-
 Need enter the data below for entry:
 
 Login: `admin@gmail.com`  

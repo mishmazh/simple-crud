@@ -2,7 +2,7 @@ import { makeAutoObservable, runInAction } from "mobx";
 import { IUser } from "../models/models";
 import axios from "../axios/axios";
 
-class UserList {
+class Users {
   users: IUser[] = [];
 
   constructor() {
@@ -43,8 +43,7 @@ class UserList {
         item.name.toLowerCase().includes(value.toLowerCase())
       );
     });
-    console.log(this.users)
   }
 }
 
-export default new UserList();
+export default new Users();

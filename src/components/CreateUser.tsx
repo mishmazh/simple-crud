@@ -1,9 +1,10 @@
 import React, { FC, useState } from "react";
-import userList from "../store/userList";
+import userList from "../store/users";
 import { v4 as uuid } from "uuid";
 import Button from "./UI/Button";
 import Input from "./UI/Input";
 import Backdrop from "./UI/Backdrop";
+import { isValid } from "../helpers/validation";
 
 interface AddUserProps {
   setDialog: (dialog: boolean) => void;
@@ -42,7 +43,11 @@ const CreateUser: FC<AddUserProps> = ({ setDialog }) => {
           placeholder="Enter the location..."
         />
 
-        <Button className="primary-btn" onClick={addUserHandler}>
+        <Button
+          className="primary-btn"
+          onClick={addUserHandler}
+          disabled={!isValid(name) || !isValid(location)}
+        >
           Add
         </Button>
       </div>

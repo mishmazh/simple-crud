@@ -3,20 +3,28 @@ import UserList from "./UserList";
 import CreateUser from "./CreateUser";
 import { FC } from "react";
 import Button from "./UI/Button";
-import {IUser} from "../models/models";
+import { IUser } from "../models/models";
 
 interface UsersFormProps {
-    users: IUser[];
-    isDialog: boolean;
-    setDialog: (isDialog: boolean) => void;
+  users: IUser[];
+  isDialog: boolean;
+  setDialog: (isDialog: boolean) => void;
 }
 
-const UsersForm: FC<UsersFormProps> = ({ users,isDialog, setDialog }) => {
+const UsersForm: FC<UsersFormProps> = ({ users, isDialog, setDialog }) => {
   return (
     <div className="users-form">
       <Search />
-      <Button className="primary-btn" onClick={() => setDialog(true)}>Add user</Button>
-      <UserList users={users} />
+      <Button className="primary-btn" onClick={() => setDialog(true)}>
+        Add user
+      </Button>
+
+      {users.length === 0 ? (
+        <div className="users-form__empty">User list is empty</div>
+      ) : (
+        <UserList users={users} />
+      )}
+
       {isDialog && <CreateUser setDialog={setDialog} />}
     </div>
   );

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import userList from "../store/userList";
+import userList from "../store/users";
 import Input from "./UI/Input";
 
 const Search = () => {

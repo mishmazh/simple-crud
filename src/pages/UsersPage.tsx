@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import userList from "../store/userList";
+import users from "../store/users";
 import UsersForm from "../components/UsersForm";
 import {observer} from "mobx-react-lite";
 
@@ -7,13 +7,13 @@ const UsersPage: FC = () => {
   const [isDialog, setDialog] = useState<boolean>(false);
 
   useEffect(() => {
-    userList.fetchUsers();
+    users.fetchUsers();
   }, []);
 
   return (
     <UsersForm
       isDialog={isDialog}
-      users={userList.users}
+      users={users.users}
       setDialog={setDialog}
     />
   );

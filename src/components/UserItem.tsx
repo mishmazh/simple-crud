@@ -1,7 +1,9 @@
 import { ChangeEvent, FC, useState } from "react";
-import userList from "../store/userList";
+import userList from "../store/users";
 import { IUser } from "../models/models";
 import Button from "./UI/Button";
+import Input from "./UI/Input";
+import { isValid } from "../helpers/validation";
 
 interface UserItemProps {
   user: IUser;
@@ -36,20 +38,16 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
   const userData = (
     <div>
       <div className="user-item__name">{user.name}</div>
-      <div>Location: {user.location}</div>
+      <div className="user-item__desc">
+        <span className="user-item__location">Location:</span> {user.location}
+      </div>
     </div>
   );
 
   const editData = (
     <div className="elements-block">
-      <input
-        type="text"
-        value={name}
-        onChange={changeNameHandler}
-        placeholder="Name..."
-      />
-      <input
-        type="text"
+      <Input value={name} onChange={changeNameHandler} placeholder="Name..." />
+      <Input
         value={location}
         onChange={changeLocationHandler}
         placeholder="Location..."
@@ -68,7 +66,11 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
   );
 
   const saveButton = (
-    <Button className="btn primary-btn" onClick={saveUserHandler}>
+    <Button
+      className="btn primary-btn"
+      onClick={saveUserHandler}
+      disabled={!isValid(name) || !isValid(location)}
+    >
       Save
     </Button>
   );
