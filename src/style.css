@@ -101,12 +101,12 @@ body {
   background-color: #f9f9fd;
 }
 
-.main-layout {
+.create-user, .main-layout {
   display: grid;
   place-items: center;
 }
 
-.user-list, .users-form {
+.create-user__form, .user-list, .users-form {
   display: flex;
   flex-direction: column;
 }
@@ -146,8 +146,20 @@ body {
   background-color: #564f6f;
 }
 
-.width-btn {
-  width: 110px;
+.main-input {
+  width: 100%;
+  padding: 12px 9px;
+  background: #d1d7e0;
+}
+
+.backdrop {
+  position: fixed;
+  display: flex;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.85);
 }
 
 .auth-form {
@@ -161,12 +173,6 @@ body {
   font-size: 30px;
   padding-bottom: 24px;
   color: #ffffff;
-}
-.auth-form input {
-  width: 100%;
-  font-size: 13px;
-  padding: 9px 0 9px 12px;
-  background: #f0f0f0;
 }
 
 .users-form {
@@ -191,6 +197,19 @@ body {
 }
 .user-item:hover {
   transform: scale(1.04);
+}
+
+.create-user {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+.create-user__form {
+  gap: 8px;
+  min-width: 400px;
+  z-index: 100;
 }
 
 /*# sourceMappingURL=style.css.map */

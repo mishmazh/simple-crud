@@ -1,24 +1,25 @@
-import Search from "./Search/Search";
+import Search from "./Search";
 import UserList from "./UserList";
-import userList from "../store/userList";
-import AddUser from "./AddUser/AddUser";
+import CreateUser from "./CreateUser";
 import { FC } from "react";
-import {observer} from "mobx-react-lite";
+import Button from "./UI/Button";
+import {IUser} from "../models/models";
 
 interface UsersFormProps {
+    users: IUser[];
     isDialog: boolean;
     setDialog: (isDialog: boolean) => void;
 }
 
-const UsersForm: FC<UsersFormProps> = ({ isDialog, setDialog }) => {
+const UsersForm: FC<UsersFormProps> = ({ users,isDialog, setDialog }) => {
   return (
     <div className="users-form">
       <Search />
-      <button className="btn primary-btn" onClick={() => setDialog(true)}>Add user</button>
-      <UserList users={userList.users} />
-      {isDialog && <AddUser setDialog={setDialog} />}
+      <Button className="primary-btn" onClick={() => setDialog(true)}>Add user</Button>
+      <UserList users={users} />
+      {isDialog && <CreateUser setDialog={setDialog} />}
     </div>
   );
 };
 
-export default observer(UsersForm);
+export default UsersForm;

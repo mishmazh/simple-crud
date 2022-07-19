@@ -43,6 +43,7 @@ class UserList {
         item.name.toLowerCase().includes(value.toLowerCase())
       );
     });
+    console.log(this.users)
   }
 }
 

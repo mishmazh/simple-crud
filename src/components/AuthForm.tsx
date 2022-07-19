@@ -1,4 +1,6 @@
 import { ChangeEvent, FC, FormEvent } from "react";
+import Button from "./UI/Button";
+import Input from "./UI/Input";
 
 interface AuthFormProps {
   email: string;
@@ -19,22 +21,22 @@ const AuthForm: FC<AuthFormProps> = ({
     <form className="auth-form" onSubmit={onSubmitHandler}>
       <div className="auth-form__title">Authorization</div>
 
-      <input
+      <Input
         type="email"
         value={email}
         onChange={setEmailHandler}
         placeholder="Enter the email..."
       />
-      <input
+      <Input
         type="password"
         value={password}
         onChange={setPasswordHandler}
         placeholder="Enter the password..."
       />
 
-      <button className="btn primary-btn" type="submit">
+      <Button className="primary-btn" type="submit">
         Login
-      </button>
+      </Button>
     </form>
   );
 };

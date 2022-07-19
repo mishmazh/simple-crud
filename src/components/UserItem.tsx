@@ -1,6 +1,7 @@
-import {ChangeEvent, FC, useState} from "react";
+import { ChangeEvent, FC, useState } from "react";
 import userList from "../store/userList";
 import { IUser } from "../models/models";
+import Button from "./UI/Button";
 
 interface UserItemProps {
   user: IUser;
@@ -57,15 +58,19 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
   );
 
   const editButton = (
-    <button className="btn primary-btn width-btn" onClick={() => setEdit(true)}>
+    <Button
+      className="btn primary-btn"
+      width="125px"
+      onClick={() => setEdit(true)}
+    >
       Edit
-    </button>
+    </Button>
   );
 
   const saveButton = (
-    <button className="btn primary-btn" onClick={saveUserHandler}>
+    <Button className="btn primary-btn" onClick={saveUserHandler}>
       Save
-    </button>
+    </Button>
   );
   // --------------------------------------------- //
 
@@ -76,12 +81,13 @@ const UserItem: FC<UserItemProps> = ({ user }) => {
       <div className="elements-block">
         {isEdit ? saveButton : editButton}
 
-        <button
-          className="btn secondary-btn width-btn"
+        <Button
+          className="btn secondary-btn"
+          width="90px"
           onClick={() => deleteUserHandler(user.id)}
         >
           Delete
-        </button>
+        </Button>
       </div>
     </div>
   );
