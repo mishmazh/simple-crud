@@ -3,8 +3,8 @@ import auth from "../store/auth";
 import AuthForm from "../components/AuthForm";
 
 const AuthPage: FC = () => {
-  const [email, setEmail] = useState<string>("admin@gmail.com");
-  const [password, setPassword] = useState<string>("admin");
+  const [email, setEmail] = useState<string>("");
+  const [password, setPassword] = useState<string>("");
 
   const setEmailHandler = (e: ChangeEvent<HTMLInputElement>) => {
     setEmail(e.target.value);
